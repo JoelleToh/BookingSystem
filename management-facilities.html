@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Condominium Facility Booking | Management Facilities</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="frontEnd.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <div class="brand">Condominium <span>Facility Booking</span></div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="management-dashboard.html">Management Dashboard</a>
+          <a href="management-bookings.html">Manage Bookings</a>
+          <a class="active" href="management-facilities.html">Manage Facilities</a>
+          <a href="management-residents.html">Manage Residents</a>
+          <a href="management-staff.html">Manage Staff</a>
+          <a href="about-management.html">About Management</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero compact-hero">
+        <div class="hero-grid">
+          <div class="card hero-copy">
+            <span class="eyebrow">Management</span>
+            <h1>Facility Record Management</h1>
+            <p>This page is for adding and updating record of facilities</p>
+            <div class="actions">
+              <a class="btn btn-secondary" href="management-dashboard.html">Back to Dashboard</a>
+              <a class="btn btn-secondary" href="management-bookings.html">Manage Bookings</a>
+              <a class="btn btn-primary" href="management-facilities.html">Manage Facilities</a>
+              <a class="btn btn-secondary" href="management-residents.html">Manage Residents</a>
+              <a class="btn btn-secondary" href="management-staff.html">Manage Staff</a>
+              <a class="btn btn-secondary" href="about-management.html">About Management</a>
+            </div>
+          </div>
+
+          <div class="card panel">
+            <h2 class="section-title">Facility Status</h2>
+            <div class="stack"></div>
+            <div id="facility-list" class="facility-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card panel">
+          <h2 class="section-title">Add New Facility</h2>
+          <div class="table-wrap">
+            <form id="facility-form">
+              <label for="facility-name">Facility Name</label>
+              <input id="facility-name" type="text" name="facility_name" required />
+              <label for="facility-location">Location</label>
+              <input id="facility-location" type="text" name="location" required />
+              <label for="facility-description">Description</label>
+              <input id="facility-description" type="text" name="description" />
+              <label for="facility-opening-time">Opening Time</label>
+              <input id="facility-opening-time" type="time" name="opening_time" value="08:00" required />
+              <label for="facility-closing-time">Closing Time</label>
+              <input id="facility-closing-time" type="time" name="closing_time" value="22:00" required />
+              <label for="facility-slot-duration">Slot Duration (mins)</label>
+              <input id="facility-slot-duration" type="number" name="slot_duration_mins" value="120" min="1" required />
+              <input type="submit" value="Create Facilities" />
+              <input type="reset" value="Clear Form" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condominium Facility Booking | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="frontEnd.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">Condominium <span>Facility Booking</span></div>
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about-management.html">About Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-copy">
+          <h1 class="h1"> A Simple booking system for our dear residents.</h1>
+          <p>
+            Dear Residents, welcome to the condominium facility booking system! This platform is designed to make it easy for you to book our shared facilities within the condominium.
+          </p>
+
+          <img src="https://cdn-cms.pgimgs.com/static/2019/07/ZPPHO.96886413.R800X800.jpg" alt="Condominium Management Team" style="width: 100%; max-width: 300px; margin-top: 0.5rem;" />
+
+          <img src="https://cos.sg/wp-content/uploads/2026/01/BBQ-Deck.jpeg" alt="BBQ Deck" style="width: 100%; max-width: 300px; margin-top: 0.5rem;" />
+
+          <img src="https://absolutesound.com.sg/wp-content/uploads/2023/06/L1000623.jpg" alt="Condominium Function Room" style="width: 100%; max-width: 300px; margin-top: 0.5rem;" />
+
+          <img src="https://stacked-editorial.sgp1.digitaloceanspaces.com/editorial/wp-content/uploads/2020/01/15214009/leedon-residence-condo.jpg " alt="Leedon Residence Condo" style="width: 100%; max-width: 300px; margin-top: 0.5rem;" />
+          <p>
+            Our management team is dedicated to providing excellent service and maintaining the highest standards of care for all residents.
+          </p>
+        </div>
+        <div class="card panel">
+          <h2 class="section-title"> Announcements </h2>
+          <div class="stack">
+            <div class="feature">
+              <strong>Dear Residents</strong>
+              <p>
+                Kindly login with your unit number and password to access the booking system.
+              </p>
+
+              <p>
+                Please ensure that you adhere to the booking guidelines and respect the shared facilities. If you have any enquiries or require any assistance, please contact our management team as shown below.
+              </p>
+
+              <p>
+                <strong>Office Phone No :</strong> +65 9143 4567
+              </p>
+              <p>
+                <strong>Operating Hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM
+              </p>
+
+            <div class="weather-card">
+             <div class="weather-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="Weather Forecast" width="80" height="80">
+                  <h5 class="weather-title">Current Weather Forecast</h5>
+            </div>
+  
+               <div id="nea-weather-content">
+              <p class="weather-loading">Fetching live data...</p>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Login</h2>
+      <div class="hero-grid login-grid">
+        <div class="card panel login-card">
+          <h2 class="section-title">Resident</h2>
+          <form id="resident-login-form">
+           <input name="unit_number" placeholder="Unit number e.g. 08-12" required />
+           <input type="password" name="password" required placeholder="Password" />
+           <button type="submit">Resident Login</button>
+          </form>
+        </div>
+
+        <div class="card panel">
+          <h2 class="section-title">For Management Staff</h2>
+          <form id="management-login-form">
+           <input name="email" type="email" placeholder="Email" required />
+           <input name="password" type="password" placeholder="Password" required />
+           <button type="submit">Management Login</button>
+           </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

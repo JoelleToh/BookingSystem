@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condominium Facility Booking | Management Staff</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="frontEnd.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">Condominium <span>Facility Booking</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="management-dashboard.html">Management Dashboard</a>
+        <a href="management-bookings.html">Manage Bookings</a>
+        <a href="management-facilities.html">Manage Facilities</a>
+        <a href="management-residents.html">Manage Residents</a>
+        <a class="active" href="management-staff.html">Manage Staff</a>
+        <a href="about-management.html">About Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card hero-copy">
+          <span class="eyebrow">Management</span>
+          <h1>Staff management page.</h1>
+          <p>
+            Use this page to manage staff accounts and keep the management side organized.
+          </p>
+          <div class="actions">
+            <a class="btn btn-secondary" href="management-dashboard.html">Back to Dashboard</a>
+            <a class="btn btn-secondary" href="management-bookings.html">Manage Bookings</a>
+             <a class="btn btn-secondary" href="management-facilities.html">Manage Facilities</a>
+            <a class="btn btn-secondary" href="management-residents.html">Manage Residents</a>
+            <a class="btn btn-primary" href="management-staff.html">Manage Staff</a>
+            <a class="btn btn-secondary" href="about-management.html">About Management</a>
+          </div>
+        </div>
+
+        <div class="card panel">
+          <h2 class="section-title">Add Staff</h2>
+          <form id="management-staff-form" class="stack">
+              <label for="staff-name">Staff Name</label>
+              <input id="staff-name" name="management_name" maxlength="100" placeholder="Staff name" required />
+              <label for="staff-email">Email</label>
+              <input id="staff-email" type="email" name="email" maxlength="100" placeholder="Email" required />
+              <label for="staff-contact">Contact Number</label>
+              <input id="staff-contact" type="tel" name="contact_number" pattern="[0-9]{8,15}" maxlength="15" placeholder="Contact number" required />
+              <label for="staff-password">Password</label>
+              <input id="staff-password" type="password" name="password" minlength="6" maxlength="255" placeholder="Password" required />
+            <button class="btn btn-primary" type="submit">Add Staff</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card panel">
+        <h2 class="section-title">Staff Records</h2>
+        <div class="actions">
+          <label for="management-staff-search">Search staff</label>
+          <input id="management-staff-search" type="search" placeholder="Search by name, email, or contact number" />
+          <button id="management-staff-search-button" class="btn btn-secondary" type="button">Search</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Staff Name</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>New Password (optional)</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="management-staff-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,590 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --border: #dbe3ea;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #eef5fb 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(219, 227, 234, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand span {
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav a {
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.nav a:hover,
+.nav a.active {
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-dark);
+}
+
+.facility-list {
+  margin-top: 15px;
+}
+
+.about-intro {
+  margin-top: 1.5rem;
+}
+
+.booking-message,
+.search-message {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.hero {
+  padding: 3.5rem 0 2rem;
+}
+
+.compact-hero {
+  padding: 1.5rem 0 1rem;
+}
+
+.compact-hero .hero-copy {
+  padding: 1.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.login-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: 2rem;
+}
+
+.about-page h1 {
+  font-size: clamp(1.75rem, 2.3vw, 2.2rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.about-page .image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  align-items: start;
+}
+
+.about-page .image-row img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.about-page p {
+  color: #334155;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.hero-copy p {
+  color: #374151;
+}
+
+.hero-copy > p:last-of-type {
+  color: #374151;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: #fff;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+.btn-warning {
+  background: #d97706;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: #b45309;
+}
+
+.btn-sm {
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.panel {
+  padding: 1.5rem;
+}
+
+.add-booking-panel summary {
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.add-booking-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  margin: -0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.add-booking-summary small {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.add-booking-panel[open] summary {
+  margin-bottom: 1rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature {
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.feature strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* Slightly darker tone for announcement paragraphs to improve readability */
+.feature p {
+  color: #374151; /* a touch darker than --muted */
+}
+
+.section {
+  padding: 1rem 0 2.5rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(15, 118, 110, 0.18);
+  border-color: rgba(15, 118, 110, 0.5);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: #f8fafc;
+  font-size: 0.92rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status.ok {
+  background: rgba(16, 185, 129, 0.14);
+  color: #047857;
+}
+
+.status.booked,
+.status.completed {
+  background: rgba(14, 165, 233, 0.14);
+  color: #0369a1;
+}
+
+.status.pending {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+}
+
+.status.cancelled {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.notice {
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  color: var(--text);
+}
+
+.notice.success {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.notice.error {
+  border-color: rgba(239, 68, 68, 0.28);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.toolbar .field {
+  min-width: min(100%, 280px);
+}
+
+.inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Center the weather forecast header and content */
+.weather-card {
+  padding: 0.75rem;
+  text-align: center;
+}
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.weather-header img {
+  margin: 0;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.weather-title {
+  margin: 0;
+  color: #1a202c;
+  font-size: 1.25rem;
+}
+
+.weather-loading {
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.weather-error {
+  color: #dc2626;
+}
+
+.calendar-toolbar {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-day-header {
+  font-weight: 700;
+  text-align: center;
+  padding: 8px;
+}
+
+.calendar-empty,
+.calendar-day {
+  min-height: 90px;
+}
+
+.calendar-day {
+  border: 1px solid var(--border);
+  padding: 6px;
+}
+
+.calendar-booking {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 0.35rem;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--primary-dark);
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.calendar-detail {
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .grid-3,
+  .grid-2,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    gap: 0.35rem;
+  }
+
+  .nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .calendar-grid {
+    min-width: 620px;
+  }
+
+  #active-booking-calendar {
+    overflow-x: auto;
+  }
+}
+
+.weather-card {
+    border: 1px solid #f7f8f8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    margin-top: 1.5rem; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    font-family: Arial, sans-serif;
+  }
+  .weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .weather-details {
+    font-size: 1.0rem;
+    color: #4a5568;
+    line-height: 1.8;
+  }

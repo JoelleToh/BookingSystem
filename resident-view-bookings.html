@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condominium Facility Booking | Resident Bookings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">Condominium <span>Facility Booking</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="resident-dashboard.html">Resident Dashboard</a>
+        <a href="resident-booking.html">Resident Booking</a>
+        <a class="active" href="resident-view-bookings.html">Booking Records</a>
+        <a href="about-management.html">About Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card panel">
+        <span class="eyebrow">Resident</span>
+        <h1 class="section-title">My Booking Records</h1>
+        <p>View and cancel your facility bookings below.</p>
+
+        <div id="search-message" class="notice error" style="margin-bottom: 1rem; display:none;"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card panel">
+        <h2 class="section-title"></h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Booking Code</th>
+                <th>Unit</th>
+                <th>Facility</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="search-results">
+              <tr>
+                <td colspan="7">Loading your bookings...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="frontEnd.js" defer></script>
+</body>
+</html>

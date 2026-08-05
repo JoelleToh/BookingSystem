@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condominium Facility Booking | Resident Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">Condominium <span>Facility Booking</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="resident-dashboard.html">Resident Dashboard</a>
+        <a class="active" href="resident-booking.html">Resident Booking</a>
+        <a href="resident-view-bookings.html">Booking Records</a>
+        <a href="about-management.html">About Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="card panel">
+        <span class="eyebrow">Resident</span>
+        <h1 class="section-title">Resident Booking Form</h1>
+        <p>Enter your details and choose the facility you want to book.</p>
+
+        <div id="booking-message" class="notice success booking-message">
+          Booking status will appear here.
+        </div>
+
+        <form id="booking-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="unit_number">Unit Number</label>
+              <input id="unit_number" name="unit_number" type="text" placeholder="e.g. 08-12" pattern="[0-9]{2}-[0-9]{2}" title="Enter the unit number as xx-xx, for example 08-12" readonly required />
+            </div>
+            <div class="field">
+              <label for="resident_name">Resident Name</label>
+              <input id="resident_name" name="resident_name" type="text" placeholder="Resident name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required />
+            </div>
+            <div class="field">
+              <label for="contact_number">Contact Number</label>
+              <input id="contact_number" name="contact_number" type="tel" placeholder="91234567" required />
+            </div>
+            <div class="field">
+              <label for="booking-facility-select">Facility</label>
+              <select id="booking-facility-select" name="facility_id" required>
+                <option value="">Loading facilities...</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="booking_date">Booking Date</label>
+              <input id="booking_date" name="booking_date" type="date" required />
+            </div>
+            <div class="field">
+              <label for="booking-time-slot">Time Slot</label>
+              <select id="booking-time-slot" name="time_slot" required>
+                <option value="">Select a facility first</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Optional remarks"></textarea>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Submit Resident Booking</button>
+            <a class="btn btn-secondary" href="resident-view-bookings.html">Check Resident Bookings</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="frontEnd.js" defer></script>
+</body>
+</html>

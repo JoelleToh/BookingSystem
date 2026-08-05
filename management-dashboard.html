@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condominium Facility Booking | Management Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="frontEnd.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <div class="brand">Condominium <span>Facility Booking</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="management-dashboard.html">Management Dashboard</a>
+        <a href="management-bookings.html">Manage Bookings</a>
+        <a href="management-facilities.html">Manage Facilities</a>
+        <a href="management-residents.html">Manage Residents</a>
+        <a href="management-staff.html">Manage Staff</a>
+        <a href="about-management.html">About Management</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero compact-hero">
+      <div class="hero-grid">
+        <div class="card hero-copy">
+          <span class="eyebrow">Management</span>
+          <h1>Management Dashboard</h1>
+          <p>This dashboard provides quick access to all management functions.</p>
+          <div class="actions">
+            <a class="btn btn-secondary" href="management-bookings.html">Manage Bookings</a>
+            <a class="btn btn-secondary" href="management-facilities.html">Manage Facilities</a>
+            <a class="btn btn-secondary" href="management-residents.html">Manage Residents</a>
+            <a class="btn btn-secondary" href="management-staff.html">Manage Staff</a>
+            <a class="btn btn-secondary" href="about-management.html">About Management</a>
+          </div>
+        </div>
+        <div class="card panel">
+          <h2 class="section-title">At a Glance</h2>
+          <div class="stack">
+            <div class="feature"><strong id="dashboard-available-facilities">-</strong>Facilities available for booking</div>
+            <div class="feature"><strong id="dashboard-upcoming-bookings">-</strong>Upcoming bookings</div>
+            <div class="feature"><strong id="dashboard-total-bookings">-</strong>Total no. of bookings</div>
+            <div class="feature"><strong id="dashboard-active-residents">-</strong>Total no. of active residents</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="active-booking-calendar" class="section">
+      <div class="card panel"></div>
+    </section>
+  </main>
+</body>
+</html>

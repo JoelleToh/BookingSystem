@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Condominium Facility Booking | Management Bookings</title>
+    <link rel="stylesheet" href="style.css" />
+  <script src="frontEnd.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrap">
+        <div class="brand">Condominium <span>Facility Booking</span></div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="management-dashboard.html">Management Dashboard</a>
+          <a class="active" href="management-bookings.html">Manage Bookings</a>
+          <a href="management-facilities.html">Manage Facilities</a>
+          <a href="management-residents.html">Manage Residents</a>
+          <a href="management-staff.html">Manage Staff</a>
+          <a href="about-management.html">About Management</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero compact-hero">
+        <div class="hero-grid">
+          <div class="card hero-copy">
+            <span class="eyebrow">Management</span>
+            <h1>Booking Record Management</h1>
+            <p>This page is for adding and updating record of booking</p>
+            <div class="actions">
+              <a class="btn btn-secondary" href="management-dashboard.html"
+                >Back to Dashboard</a
+              >
+              <a class="btn btn-primary" href="management-bookings.html"
+                >Manage Bookings</a
+              >
+              <a class="btn btn-secondary" href="management-facilities.html"
+                >Manage Facilities</a
+              >
+              <a class="btn btn-secondary" href="management-residents.html"
+                >Manage Residents</a
+              >
+              <a class="btn btn-secondary" href="management-staff.html"
+                >Manage Staff</a
+              >
+              <a class="btn btn-secondary" href="about-management.html"
+                >About Management</a
+              >
+            </div>
+          </div>
+
+          <details class="card panel add-booking-panel">
+            <summary class="section-title add-booking-summary">
+              <span>Add Booking</span>
+              <small>Click to expand</small>
+            </summary>
+            <form id="booking-form" class="stack">
+              <label for="management-booking-unit">Unit Number</label>
+              <input id="management-booking-unit"
+                name="unit_number"
+                placeholder="Unit number e.g. 08-12"
+                pattern="[0-9]{2}-[0-9]{2}"
+                title="Enter the unit number as xx-xx, for example 08-12"
+                required
+              />
+              <label for="management-booking-resident">Resident Name</label>
+              <input id="management-booking-resident"
+                name="resident_name"
+                placeholder="Resident name"
+                required
+              />
+              <label for="management-booking-email">Email</label>
+              <input id="management-booking-email" name="email" type="email" placeholder="Email" required />
+              <label for="management-booking-contact">Contact Number</label>
+              <input id="management-booking-contact"
+                name="contact_number"
+                placeholder="Contact number"
+                required
+              />
+
+              <label for="booking-facility-select">Facility</label>
+              <select id="booking-facility-select" name="facility_id" required>
+                <option value="">Loading facilities...</option>
+              </select>
+
+              <label for="management-booking-date">Booking Date</label>
+              <input id="management-booking-date" name="booking_date" type="date" required />
+              <label for="booking-time-slot">Time Slot</label>
+              <select id="booking-time-slot" name="time_slot" required>
+                <option value="">Select a facility first</option>
+              </select>
+              <label for="management-booking-notes">Notes</label>
+              <textarea id="management-booking-notes" name="notes" placeholder="Notes"></textarea>
+
+              <button type="submit">Add Booking</button>
+            </form>
+          </details>
+        </div>
+      </section>
+      <section class="section">
+        <div class="card panel">
+          <h2 class="section-title">Search Bookings</h2>
+          <div class="actions">
+            <select id="booking-status">
+              <option value="">All Statuses</option>
+              <option value="Booked">Booked</option>
+              <option value="Cancelled">Cancelled</option>
+              <option value="Completed">Completed</option>
+            </select>
+            <input id="booking-facility" type="text" placeholder="Facility" />
+            <input
+              id="booking-resident-name-filter"
+              type="text"
+              placeholder="Resident name"
+            />
+            <input
+              id="booking-unit"
+              type="text"
+              placeholder="Unit number e.g. 08-12"
+              pattern="[0-9]{2}-[0-9]{2}"
+              title="Enter the unit number as xx-xx, for example 08-12"
+            />
+            <button id="filter-bookings" class="btn btn-primary" type="button">
+              Filter
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="card panel">
+          <h2 class="section-title">Booking Table</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Booking Code</th>
+                  <th>Resident Name</th>
+                  <th>Unit</th>
+                  <th>Facility</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                  <th>Notes</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="booking-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
